@@ -1,7 +1,0 @@
-<h1>Welcome</h1>
-<% if logged_in? %>
- <%= current_user.username %>
-<% end %>
-
-<%= button_to 'Login', '/login', method: :get %>
-<%= button_to 'Register', '/users/new', method: :get %>
