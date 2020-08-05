@@ -7,3 +7,21 @@ body{
 h1 {
    font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
 }
+
+h2 {
+   font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
+}
+
+h3 {
+   font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
+}
+
+.btn {
+	background-color: #3778c2;
+	border-color: #3778c2;
+}
+
+.btn:hover {
+   background-color: #5fb523;
+   border-color: #5fb523;
+}
