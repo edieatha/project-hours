@@ -39,3 +39,8 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/project-hours.iml
+/.idea/.rakeTasks
+/.idea/vcs.xml
