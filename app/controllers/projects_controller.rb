@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
       redirect_to projects_path
     else
        flash.now[:danger] = 'Project update failed!'
-      render :edit 
+      render :edit
     end
   end
 
@@ -44,10 +44,10 @@ class ProjectsController < ApplicationController
   private
 
   def set_project
-    @project = project.find(params[:id])
+    @project = Project.find(params[:id])
   end
 
   def project_params
-    params.require(:project).permit(:project_name, :user_id, :image)
+    params.require(:project).permit(:project_name, :user_id, :project_icon)
   end
 end

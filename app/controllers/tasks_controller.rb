@@ -41,18 +41,22 @@ class TasksController < ApplicationController
 
     if @task.update(task_params)
       if params[:task][:project_ids]
-        redirect_to tasks_path, notice: 'task updated!'
+        flash[:success] = 'Task updated!'
+        redirect_to tasks_path
       else
-        redirect_to tasks_no_project_path, notice: 'Task updated!'
+        flash[:success] = 'Task updated!'
+        redirect_to tasks_no_project_path
       end
     else
-      render :edit, danger: 'Task update failed.'
+      flash[:danger] = 'Task update failed!'
+      render :edit
     end
   end
 
   def destroy
     @task.destroy
-    redirect_to tasks_path, notice: 'Task deleted'
+    flash[:success] = 'Task deleted!'
+    redirect_to tasks_path
   end
 
   # def search
@@ -67,6 +71,6 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:task_name, :hours, :user_id, :project_id)
+    params.require(:task).permit(:task_name, :task_hours, :creator_id, :project_id)
   end
 end
