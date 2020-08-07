@@ -10,7 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_201142) do
+ActiveRecord::Schema.define(version: 2020_08_06_230943) do
+
+  create_table "project_tasks", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "\"project_id\"", name: "index_project_tasks_on_project_id"
+    t.index "\"task_id\"", name: "index_project_tasks_on_task_id"
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "project_name"
+    t.string "project_icon"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "\"user_id\"", name: "index_projects_on_user_id"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "task_name"
+    t.integer "task_hours"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index "\"creator_id\"", name: "index_tasks_on_creator_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username"
