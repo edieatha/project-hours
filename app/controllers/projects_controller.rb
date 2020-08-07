@@ -13,9 +13,11 @@ class ProjectsController < ApplicationController
     @project = current_user.projects.build(project_params)
 
     if @project.save
-      redirect_to projects_path, notice: 'Project created.'
+      flash[:success] = 'Project created.'
+      redirect_to projects_path
     else
-      render :new, danger: 'Project creation failed!'
+      flash.now[:danger] = 'Project creation failed!'
+      render :new
     end
   end
 
@@ -25,15 +27,18 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to projects_path, notice: 'project updated.'
+      flash[:success] = 'Project updated.'
+      redirect_to projects_path
     else
-      render :edit, danger: 'Project update failed!'
+       flash.now[:danger] = 'Project update failed!'
+      render :edit 
     end
   end
 
   def destroy
     @project.destroy
-    redirect_to projects_path, notice: 'Project deleted!'
+     flash[:success] = 'Project deleted.'
+    redirect_to projects_path
   end
 
   private

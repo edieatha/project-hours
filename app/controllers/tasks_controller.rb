@@ -19,12 +19,15 @@ class TasksController < ApplicationController
 
     if @task.save
       if params[:task][:project_ids]
-        redirect_to tasks_path, notice: 'Created task with project.'
+        flash[:success] = "Created task with project."
+        redirect_to tasks_path
       else
-        redirect_to tasks_no_project_path, notice: 'Created task without project.'
+        flash[:success] = "Created task without project."
+        redirect_to tasks_no_project_path
       end
     else
-      render :new, danger: 'Task creation failed.'
+      flash.now[:danger] = 'Task creation failed'
+      render :new
     end
   end
 

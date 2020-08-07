@@ -1,12 +1,14 @@
 <% provide(:title, "Ungrouped Tasks") %>
 <% provide(:navbar_page_title, "All other tasks") %>
 
-<h1>total hours: <%= @tasks_no_project.sum(:task_hours) %> hs</h1>
+<h1>Total hours: <%= @tasks_no_project.sum(:task_hours) %> hs</h1>
 
 <section class="projects">
   <%= render partial: "all_tasks", locals: { tasks: @tasks_no_project, allow_change: true} %>
 </section>
 
 
-  <%= button_to 'add new project', new_project_path, method: :get, class: 'btn btn-primary' %>
-  <%= button_to 'back', current_user, method: :get, class: 'btn btn-secondary' %>
+  <%= button_to 'add new project', new_project_path, method: :get, 
+  class: 'btn btn-primary' %>
+  <%= button_to 'back', current_user, method: :get, 
+  class: 'btn btn-secondary' %>

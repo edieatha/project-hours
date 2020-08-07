@@ -1,0 +1,21 @@
+<% provide(:title, @project.project_name) %>
+<% provide(:navbar_page_title, "Project tasks") %>
+
+<section class="group_info">
+  <h1>
+    <%= image(@project.image, class: "fa-lg") %>
+    <%= @project.project_name %>
+  </h1>
+</section>
+
+<section class="group-table">
+  <%= render partial: "all_projects", locals: { tasks: @project.tasks, allow_change: true} %>
+</section>
+
+<br>
+
+  <%= button_to 'edit', edit_project_path(@project), method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'destroy', @project, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary' %>
+  <%= button_to 'create new project', new_project_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'add new task', new_task_path, method: :get, class: 'btn btn-primary' %>
+  <%= button_to 'back', projects_path, method: :get, class: 'btn btn-secondary' %>

@@ -1,14 +1,6 @@
-<h1 class='text-center'>New Project</h1>
+<% provide(:title, "new project") %>
+<% provide(:navbar_page_title, "create new project") %>
 
-<div class="col-12 mb-5">
-  <div class="text-center">
-    <%= form_with(model: @project, local: true) do |f| %>
-      <%= render 'shared/error_messages' %>
+<%= render 'projects_form', project: @project %>
 
-      <%= f.label :username %>
-      <%= f.text_field :username, class: 'mb-1 form-control' %>
-
-      <%= f.submit "Create my account", class: "mt-2 btn-lg btn-primary btn-block" %>
-    <% end %>
-  </div>
-</div>
+<%= button_to 'back', projects_path, method: :get, class: 'btn btn-secondary' %>
