@@ -1,14 +1,12 @@
 <div class="row">
   <div class="col-12">
-    <h3 class='text-center mb-5'>Hello,
+    <h3 class='mb-5 mt-3'>Hello,
       <%= @user.username %><br>
       <div class="list-group mt-3">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-          Welcome
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">All my tasks</a>
-        <a href="#" class="list-group-item list-group-item-action">All other tasks</a>
-        <a href="#" class="list-group-item list-group-item-action">All projects</a>
+        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Welcome</a>
+        <%= link_to 'All my tasks', tasks_path, class: "list-group-item list-group-item-action" %>
+        <%= link_to 'All other tasks', tasks_no_project_path, class: "list-group-item list-group-item-action" %>
+        <%= link_to 'All my projects', projects_path, class: "list-group-item list-group-item-action" %>
       </div>
     </h3>
   </div>

@@ -1,0 +1,46 @@
+  <%= form_with(model: task, local: true, class: "form-signin") do |form| %>
+  <h2>Create Task</h2>
+  <% if task.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(task.errors.count, "error") %> 
+      stopped this task from being saved:</h2>
+
+      <ul>
+      <% task.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :task_name, 
+    class: "form-control", placeholder: "Enter Task" %>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.text_field :task_hours, 
+    class: "form-control", placeholder: "Hours Worked" %>
+  </div>
+  <br>
+
+  <div class="field">
+    <h2>Select Project</h2>
+    <% Project.all.each do |project| %>
+      <div class="container">
+        <div class="d-flex flex-row">
+          <div class="d-flex justify-content-start">
+            <%= check_box_tag "project[project_ids][]", project.id, @task.project_ids.include?(project.id) %>
+            <%= project.project_name %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= form.submit class: "btn mt-2 btn-lg btn-primary btn-block" %>
+  </div>
+<% end %>

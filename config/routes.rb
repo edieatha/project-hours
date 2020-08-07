@@ -7,12 +7,13 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
-  get  '/projects_no_group', to: 'projects#index_projects_no_group'
-  get '/search' => 'projects#search'
   resources :projects
+  resources :tasks
 
-  get 'projects/new', to: 'projects#new'
-  post 'projects/new', to: 'projects#create'
-  get 'projects/index', to: 'projects#index'
+  get '/tasks_no_project', to: 'tasks#index_tasks_no_project'
+
+
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -2,20 +2,20 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show edit update destroy]
 
   def new
-    @project = project.new
+    @project = Project.new
   end
 
   def index
-    @projects = project.all.order(name: :asc)
+    @projects = Project.all.order(name: :asc)
   end
 
   def create
     @project = current_user.projects.build(project_params)
 
     if @project.save
-      redirect_to projects_path, notice: 'project created.'
+      redirect_to projects_path, notice: 'Project created.'
     else
-      render :new, danger: 'project creation failed!'
+      render :new, danger: 'Project creation failed!'
     end
   end
 
@@ -27,13 +27,13 @@ class ProjectsController < ApplicationController
     if @project.update(project_params)
       redirect_to projects_path, notice: 'project updated.'
     else
-      render :edit, danger: 'project update failed!'
+      render :edit, danger: 'Project update failed!'
     end
   end
 
   def destroy
     @project.destroy
-    redirect_to projects_path, notice: 'project deleted.'
+    redirect_to projects_path, notice: 'Project deleted!'
   end
 
   private
@@ -43,6 +43,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.require(:project).permit(:name, :user_id, :icon)
+    params.require(:project).permit(:project_name, :user_id, :image)
   end
 end
