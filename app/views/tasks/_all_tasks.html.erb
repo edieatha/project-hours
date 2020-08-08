@@ -15,7 +15,7 @@
             <%= icon(project.icon, class: "fa-lg") %>
           <% end %>
         </td>
-        <td><%= link_to "#{project.name}", task %></td>
+        <td><%= link_to "#{task.task_name}", task %></td>
         <td><%= task.task_hours %> hs</td>
         <td><%= task.created_at.strftime("%b %d, %Y").downcase %></td>
       </tr>

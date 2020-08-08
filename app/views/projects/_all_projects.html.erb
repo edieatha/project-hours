@@ -9,9 +9,7 @@
   <tbody>
   <% projects.each do |project| %>
       <tr>
-        <td>
-          <%= icon(project.image, class: "fa-lg") %>
-        </td>
+		<td><%= link_to "#{project.project_icon}", project %></td> 
         <td><%= link_to "#{project.project_name}", project %></td>
         <td><%= project.created_at.strftime("%b %d, %Y").downcase %></td>
       </tr>

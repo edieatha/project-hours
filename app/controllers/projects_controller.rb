@@ -30,14 +30,14 @@ class ProjectsController < ApplicationController
       flash[:success] = 'Project updated.'
       redirect_to projects_path
     else
-       flash.now[:danger] = 'Project update failed!'
+      flash.now[:danger] = 'Project update failed!'
       render :edit
     end
   end
 
   def destroy
     @project.destroy
-     flash[:success] = 'Project deleted.'
+    flash[:success] = 'Project deleted.'
     redirect_to projects_path
   end
 

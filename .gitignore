@@ -44,3 +44,13 @@ yarn-debug.log*
 /.idea/project-hours.iml
 /.idea/.rakeTasks
 /.idea/vcs.xml
+.generators
+.DS_Store
+app/assets/.DS_Store
+app/assets/fonts/.DS_Store
+app/assets/stylesheets/.DS_Store
+config/.DS_Store
+config/initializers/.DS_Store
+.generators
+.DS_Store
+.DS_Store

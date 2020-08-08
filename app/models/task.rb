@@ -1,5 +1,5 @@
 class Task < ApplicationRecord
-  belongs_to :creator, class_name: 'User'
+  belongs_to :user
   has_many :project_tasks
   has_many :projects, -> { distinct }, through: :project_tasks
   
