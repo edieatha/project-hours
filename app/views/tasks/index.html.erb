@@ -1,7 +1,7 @@
 <% provide(:title, "All Tasks") %>
 <% provide(:navbar_page_title, "all my projects") %>
 
-<h2>Total Hours: <%= @tasks.sum(:task_hours) %> hs</h2>
+<h2 class="text-white">Total Hours: <%= @tasks.sum(:task_hours) %> hs</h2>
 
 
 <%= render partial: "all_tasks", locals: { tasks: @tasks, allow_change: true} %>

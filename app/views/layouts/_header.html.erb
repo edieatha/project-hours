@@ -1,7 +1,8 @@
-<nav class="navbar navbar-expand-md mb-2 navbar-light" style="background-color: #3778c2;">
+<nav class="navbar navbar-expand-md mb-2 text-white">
   <div class="container-fluid">
     <div class="navbar-header">
-      <%= link_to 'Project Hours', root_path, class: "navbar-brand text-decoration-none mx-2" %>
+      <%= button_to 'back', request.referrer, method: :get, 
+class: 'mt-2 btn-lg btn-primary btn-block' %>
     </div>
     <% if logged_in? %>
       <ul class="nav navbar-right ">

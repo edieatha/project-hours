@@ -1,13 +1,16 @@
-<div class="row">
+<div class="row text-white">
   <div class="col-12">
-    <h3 class='mb-5 mt-3'>Hello,
-      <%= @user.username %><br>
-      <div class="list-group mt-3">
-        <a href="#" class="list-group-item list-group-item-action active" aria-current="true">Welcome</a>
-        <%= link_to 'All my tasks', tasks_path, class: "list-group-item list-group-item-action" %>
-        <%= link_to 'All other tasks', tasks_no_project_path, class: "list-group-item list-group-item-action" %>
-        <%= link_to 'All my projects', projects_path, class: "list-group-item list-group-item-action" %>
-      </div>
+    <h4 class='mb-5 mt-3 text-center'><%= @user.username %></h4>
+      <div>
+        <h3>
+        <ul class="list-unstyled m-5">
+        <li><%= material_icon.timer %> <%= link_to 'All my tasks', tasks_path, class: "text-white"  %></li>
+        <hr class="solid">
+        <li><%= material_icon.face %> <%= link_to 'All other tasks', tasks_no_project_path, class: "text-white"%></li>
+        <hr class="solid">
+        <li><%= material_icon.widgets %> <%= link_to 'All my projects', projects_path, class: "text-white" %></li>
+      </ul>
     </h3>
+      </div>
   </div>
 </div>
