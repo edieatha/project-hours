@@ -1,20 +1,21 @@
 <div class="row text-white">
   <div class="col-12">
     <h4 class='mb-5 mt-3 text-center'>
-      <%= gravatar_for @user %>
+      <img src="https://img.icons8.com/fluent/96/000000/user-male-circle.png"/>
+      <%# <%= gravatar_for @user %1> %>
       <br>
       <%= @user.username %>
     </h4>
       <div>
         <h3>
         <ul class="list-unstyled m-5 pl-5 pr-5 ">
-          <li><i class="material-icons">timer</i>  <%= link_to 'All my tasks', tasks_path, 
+          <li><img src="https://img.icons8.com/fluent/48/000000/rescheduling-a-task.png"/> <%= link_to 'All my tasks', tasks_path, 
             class: "text-white "  %></li>
         <hr class="solid">
-        <li><i class="material-icons">face</i>  <%= link_to 'All other tasks', tasks_no_project_path, 
+        <li><img src="https://img.icons8.com/fluent/48/000000/inspection.png"/> <%= link_to 'All other tasks', tasks_no_project_path, 
           class: "text-white"%></li>
         <hr class="solid">
-        <li><i class="material-icons">widgets</i>  <%= link_to 'All my projects', projects_path, 
+        <li><img src="https://img.icons8.com/fluent/48/000000/project.png"/> <%= link_to 'All my projects', projects_path, 
           class: "text-white" %></li>
       </ul>
     </h3>
