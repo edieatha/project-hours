@@ -1,11 +1,17 @@
-<nav class="navbar navbar-expand-md mb-2 text-white">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <i class="material-icons">menu</i>
+
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Task Management App</h5>
+      <span class="text-muted">Time track your tasks and projects.</span>
     </div>
+  </div>
+  <nav class="navbar navbar-dark" style="background-color: #0c193e;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <% if logged_in? %>
       <ul class="nav navbar-right ">
-        <li><%= link_to "Log out", logout_path, class: "mx-2 navbar-text nav-link text-decoration-none nav-item",
+        <li><%= link_to "Log out", logout_path, class: "navbar-text nav-link text-decoration-none nav-item",
                         method: :delete %></li>
       </ul>
     <% else %>
@@ -13,5 +19,4 @@
         <li><%= link_to "Sign up", signup_path, class: "mx-2 nav-item navbar-text nav-link text-decoration-none" %></li>
       </ul>
     <% end %>
-  </div>
-</nav>
+  </nav>

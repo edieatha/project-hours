@@ -1,6 +1,10 @@
 <div class="row text-white">
   <div class="col-12">
-    <h4 class='mb-5 mt-3 text-center'><%= @user.username %></h4>
+    <h4 class='mb-5 mt-3 text-center'>
+      <%= gravatar_for @user %>
+      <br>
+      <%= @user.username %>
+    </h4>
       <div>
         <h3>
         <ul class="list-unstyled m-5 pl-5 pr-5 ">

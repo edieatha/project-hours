@@ -37,7 +37,7 @@ class TasksController < ApplicationController
 
   def update
     @task.projects = []
-    @task.projects = Project.find(params[:task][:project_ids]) if params[:task][:project_ids]
+    @task.projects =Project Project.find(params[:task][:project_ids]) if params[:task][:project_ids]
 
     if @task.update(task_params)
       if params[:task][:project_ids]
