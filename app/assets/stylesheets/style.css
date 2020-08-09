@@ -19,12 +19,12 @@ h3 {
    font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
 }
 
-.btn {
+.btn-primary {
 	background-color: #3778c2;
 	border-color: #3778c2;
 }
 
-.btn:hover {
+.btn-primary:hover {
    background-color: #5fb523;
    border-color: #5fb523;
 }

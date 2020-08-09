@@ -2,10 +2,10 @@
 <% provide(:navbar_page_title, "Project tasks") %>
 
 <section class="group_info">
-  <h1>
+  <h2 class="text-white">
 	<%= @project.project_icon %>
     <%= @project.project_name %>
-  </h1>
+  </h2>
 </section>
 
 <section class="group-table">
@@ -14,16 +14,18 @@
 
 <br>
 
-  <%= button_to 'edit', edit_project_path(@project), method: :get, 
-  class: 'btn btn-primary' %>
+  <%= button_to 'Edit project', edit_project_path(@project), method: :get, 
+  class: 'btn mt-2 btn-lg btn-primary btn-block' %>
   
-  <%= button_to 'destroy', @project, method: :delete, data: { confirm: 'Are you sure?' },  class: 'btn btn-primary' %>
+  <%= button_to 'Delete project', @project, method: :delete, data: { confirm: 'Are you sure?' },
+   class: 'btn mt-2 btn-lg btn-danger btn-block' %>
   
-  <%= button_to 'create new project', new_project_path, method: :get, 
-  class: 'btn btn-primary' %>
+  <%= button_to 'New project', new_project_path, method: :get, 
+  class: 'btn mt-2 btn-lg btn-success btn-block' %>
 	  
-  <%= button_to 'add new task', new_task_path, method: :get, 
-  class: 'btn btn-primary' %>
+  <%= button_to 'New task', new_task_path, method: :get, 
+  class: 'btn mt-2 btn-lg btn-primary btn-block' %>
 	  
-  <%= button_to 'back', projects_path, method: :get, 
-  class: 'btn btn-secondary' %>
+  <%= button_to 'Back', projects_path, method: :get, 
+  class: 'btn mt-2 btn-outline-light btn-block' %>
+  <br>

@@ -3,12 +3,12 @@
     <h4 class='mb-5 mt-3 text-center'><%= @user.username %></h4>
       <div>
         <h3>
-        <ul class="list-unstyled m-5">
-        <li><%= material_icon.timer %> <%= link_to 'All my tasks', tasks_path, class: "text-white"  %></li>
+        <ul class="list-unstyled m-5 pl-5 pr-5 ">
+        <li><i class="material-icons">timer</i>  <%= link_to 'All my tasks', tasks_path, class: "text-white "  %></li>
         <hr class="solid">
-        <li><%= material_icon.face %> <%= link_to 'All other tasks', tasks_no_project_path, class: "text-white"%></li>
+        <li><i class="material-icons">face</i>  <%= link_to 'All other tasks', tasks_no_project_path, class: "text-white"%></li>
         <hr class="solid">
-        <li><%= material_icon.widgets %> <%= link_to 'All my projects', projects_path, class: "text-white" %></li>
+        <li><i class="material-icons">widgets</i>  <%= link_to 'All my projects', projects_path, class: "text-white" %></li>
       </ul>
     </h3>
       </div>
