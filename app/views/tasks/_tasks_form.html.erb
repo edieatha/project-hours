@@ -1,5 +1,5 @@
   <%= form_with(model: task, local: true, class: "form-signin") do |form| %>
-  <h2>Create Task</h2>
+  <h2 class="text-white">Create Task</h2>
   
   <div class="field">
     <%= form.text_field :task_name, 
@@ -13,12 +13,13 @@
   <br>
 
   <div class="field">
-    <h2>Select Project</h2>
+    <%= form.label :project %>
+    <%# <h2 class="text-white">Select Project</h2> %>
     <% Project.all.each do |project| %>
       <div class="container">
         <div class="d-flex flex-row">
           <div class="d-flex justify-content-start">
-            <%= check_box_tag "project[project_ids][]", project.id, @task.project_ids.include?(project.id) %>
+            <%= check_box_tag "task[project_ids][]", project.id, @task.project_ids.include?(project.id) %>
             <%= project.project_name %>
           </div>
         </div>

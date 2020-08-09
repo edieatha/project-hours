@@ -19,10 +19,10 @@ class TasksController < ApplicationController
 
     if @task.save
       if params[:task][:project_ids]
-        flash[:success] = "Created task with project."
+        flash[:success] = 'Created task with project.'
         redirect_to tasks_path
       else
-        flash[:success] = "Created task without project."
+        flash[:success] = 'Created task without project.'
         redirect_to tasks_no_project_path
       end
     else
@@ -41,8 +41,8 @@ class TasksController < ApplicationController
 
     if @task.update(task_params)
       if params[:task][:project_ids]
-        flash[:success] = 'Task updated!'
         redirect_to tasks_path
+        flash[:success] = 'Task updated!'
       else
         flash[:success] = 'Task updated!'
         redirect_to tasks_no_project_path

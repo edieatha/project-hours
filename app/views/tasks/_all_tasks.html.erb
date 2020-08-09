@@ -16,7 +16,7 @@
             <%= link_to "#{project.project_icon}", project %>
           <% end %>
         </td>
-        <td><%= link_to "#{task.task_name}", task %></td>
+        <td><%= task.task_name %></td>
         <td><%= task.task_hours %> hs</td>
         <td><%= task.created_at.strftime("%b %d, %Y") %></td>
       </tr>

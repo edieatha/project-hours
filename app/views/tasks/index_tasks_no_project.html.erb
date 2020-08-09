@@ -3,13 +3,12 @@
 
 <h1 class="text-white">Total hours: <%= @tasks_no_project.sum(:task_hours) %> hs</h1>
 
-<section class="projects">
-  <%= render partial: "all_tasks", locals: { tasks: @tasks_no_project, allow_change: true} %>
-</section>
+<%= render partial: "all_tasks", locals: { tasks: @tasks_no_project, allow_change: true} %>
 
+<%= button_to 'add new project', new_project_path, method: :get, 
+  class: 'btn mt-2 btn-lg btn-primary btn-block' %>
 
-  <%= button_to 'add new project', new_project_path, method: :get, 
+<%= button_to 'back', current_user, method: :get, 
   class: 'btn mt-2 btn-lg btn-primary btn-block' %>
-  <%= button_to 'back', current_user, method: :get, 
-  class: 'btn mt-2 btn-lg btn-primary btn-block' %>
-  <br>
+
+<br>
