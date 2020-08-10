@@ -2,7 +2,6 @@ class Task < ApplicationRecord
   belongs_to :user
   has_many :project_tasks
   has_many :projects, -> { distinct }, through: :project_tasks
-  
   validates :task_name, presence: true
   validates :task_hours, presence: true
 
