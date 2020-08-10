@@ -5,6 +5,7 @@
       <th scope="col">Icon</th>
       <th scope="col">Name</th>
       <th scope="col">Time</th>
+      <th scope="col">Status</th>
       <th scope="col">Date</th>
     </tr>
   </thead>
@@ -18,6 +19,7 @@
         </td>
         <td class="text-decoration-none"><%= link_to "#{task.task_name}", task%></td>
         <td><%= task.task_hours %> hs</td>
+        <td><%= task.task_status %></td>
         <td><%= task.created_at.strftime("%b %d, %Y") %></td>
       </tr>
   <% end %>

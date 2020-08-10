@@ -2,15 +2,19 @@
   <h2 class="text-white">Create Task</h2>
   
   <div class="field">
-    <%= form.text_field :task_name, 
-    class: "form-control", placeholder: "Enter Task" %>
+    <%= form.text_field :task_name, class: "form-control", placeholder: "Enter Task" %>
   </div>
   <br>
   <div class="field">
-    <%= form.text_field :task_hours, 
-    class: "form-control", placeholder: "Hours Worked" %>
+    <%= form.text_field :task_hours, class: "form-control", placeholder: "Hours Worked" %>
   </div>
   <br>
+
+    <div class="text-white">
+      <%= form.label :task_status, class: "text-white" %>
+      <%= form.select(:task_status, options_for_select([["✅ Done"], ["⏳ Pending"], ["⚠️ Overdue"]])) %>
+    </div>
+
 
   <div class="field">
     <%= form.label :project, class: 'text-white' %>
