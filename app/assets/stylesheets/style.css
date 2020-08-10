@@ -1,42 +1,55 @@
-@font-face {font-family: "ProximaNova-Regular"; src: url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.eot"); src: url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.woff") format("woff"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.svg#ProximaNova-Regular") format("svg"); }
-@font-face {font-family: "ProximaNova-Bold"; src: url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.eot"); src: url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.woff") format("woff"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.svg#ProximaNova-Bold") format("svg"); }
+@font-face {
+    font-family: "ProximaNova-Regular";
+    src: url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.eot");
+    src: url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.woff") format("woff"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/0376a58122a881d16a294512d3c947b1.svg#ProximaNova-Regular") format("svg");
+}
 
-body{
+@font-face {
+    font-family: "ProximaNova-Bold";
+    src: url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.eot");
+    src: url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.woff") format("woff"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/f697c472b2ad5a1ca383a63c349f3dd9.svg#ProximaNova-Bold") format("svg");
+}
+
+body {
     max-width: 500px;
     margin: auto;
     font-family: 'ProximaNova-Regular', Helvetica, Arial, sans-serif;
     background-color: #d7ddf0;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239295ac' fill-opacity='0.39'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%239295ac' fill-opacity='0.39'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 h1 {
-   font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
+    font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
 }
 
 h2 {
-   font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
+    font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
 }
 
 h3 {
-   font-family: 'ProximaNova-Bold', Helvetica, Arial, sans-serif;
+    font-family: 'ProximaNova-Regular', Helvetica, Arial, sans-serif;
 }
 
 .btn-primary {
-	background-color: #3778c2;
-	border-color: #3778c2;
+    background-color: #3778c2;
+    border-color: #3778c2;
 }
 
 .btn-primary:hover {
-   background-color: #5fb523;
-   border-color: #5fb523;
+    background-color: #5fb523;
+    border-color: #5fb523;
 }
 
-
 .gradient-background {
-  background: rgb(2,0,36);
-  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(22,54,97,1) 35%, rgba(52,130,187,1) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(22, 54, 97, 1) 35%, rgba(52, 130, 187, 1) 100%);
 }
 
 hr.solid {
-  border-top: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    padding-right: 2rem;
+}
+
+.logo-font {
+    font-family: 'Montserrat', sans-serif;
 }

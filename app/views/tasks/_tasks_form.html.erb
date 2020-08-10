@@ -13,15 +13,15 @@
   <br>
 
   <div class="field">
-    <%= form.label :project %>
+    <%= form.label :project, class: 'text-white' %>
     <%# <h2 class="text-white">Select Project</h2> %>
     <% Project.all.each do |project| %>
       <div class="container">
         <div class="d-flex flex-row">
-          <div class="d-flex justify-content-start">
+          <div class="d-flex justify-content-around mt-1">
             <%= check_box_tag "task[project_ids][]", project.id, @task.project_ids.include?(project.id) %>
-            <%= project.project_name %>
           </div>
+          <div class='ml-2 text-white'> <%= project.project_name%></div>
         </div>
       </div>
     <% end %>

@@ -1,17 +1,16 @@
-<% provide(:title, @task.task_name)"%>
+<h3>
+<% provide(:title, @task.task_name) %>
 <% provide(:navbar_page_title, "edit project") %>
+</h3>
 
-<div class="row">
 
-<h1> <%= @task.task_name %> </h1>
+<div class="text-center">
+
+<h3 class="text-white">Task: <%= @task.task_name %> </h3>
 
 <br>
-<%= button_to 'edit', edit_project_path(@project), method: :get,
-class: 'btn btn-primary' %>
+<%= button_to 'Edit', edit_task_path(@task), method: :get, class: 'btn btn-primary btn-lg btn-block mb-2' %>
+<%= button_to 'Delete', @task, method: :delete, class: 'btn btn-primary btn-lg btn-block mb-2', data: { confirm: 'are you sure?' } %>
 
-<%= button_to 'delete', @project, method: :delete,
-class: 'btn btn-primary', data: { confirm: 'are you sure?' } %>
-
-<%= button_to 'back', request.referrer, method: :get,
-class: 'btn btn-secondary' %>
+<%= button_to 'Back', request.referrer, method: :get, class: 'btn btn-primary btn-lg btn-block mb-2' %>
 </div>
