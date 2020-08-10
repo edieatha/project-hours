@@ -1,0 +1,18 @@
+<% provide(:title, "Projects") %>
+<% provide(:navbar_page_title, "all my groups") %>
+
+<h2 class="text-white">All projects: <%= @projects.size %> </h2>
+
+<section class="groups">
+  <%= render partial: "all_projects", 
+  locals: { projects: @projects, allow_change: true} %>
+</section>
+
+<br>
+
+  <%= button_to 'Add new project', new_project_path, method: :get,
+  class: 'btn mt-2 btn-lg btn-primary btn-block' %>
+
+  <%= button_to 'back', current_user, method: :get,
+    class: 'btn mt-2 btn-lg btn-primary btn-block' %>
+    <br>

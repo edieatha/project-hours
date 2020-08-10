@@ -1,0 +1,23 @@
+
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Task Manager</h5>
+      <span class="text-muted">Task management app.</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark mb-1" style="background-color: #0c193e;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="text-white"><img src="https://img.icons8.com/fluent/48/000000/hourglass--v1.png"/>Task Manager</div>
+    <% if logged_in? %>
+      <ul class="nav navbar-right ">
+        <li><%= link_to "Log out", logout_path, class: "navbar-text nav-link text-decoration-none nav-item",
+                        method: :delete %></li>
+      </ul>
+    <% else %>
+      <ul class="nav navbar-right ">
+        <li><%= link_to "Sign up", signup_path, class: "mx-2 nav-item navbar-text nav-link text-decoration-none" %></li>
+      </ul>
+    <% end %>
+  </nav>

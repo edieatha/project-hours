@@ -1,0 +1,20 @@
+<div class="card">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Icon</th>
+      <th scope="col">Title</th>
+      <th scope="col">Created</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% projects.each do |project| %>
+      <tr>
+		<td><%= project.project_icon %></td> 
+        <td><%= link_to "#{project.project_name}", project %></td>
+        <td><%= project.created_at.strftime("%b %d, %Y")%></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>

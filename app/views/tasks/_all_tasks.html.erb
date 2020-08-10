@@ -1,0 +1,26 @@
+<div class="card">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Icon</th>
+      <th scope="col">Name</th>
+      <th scope="col">Time</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% tasks.each do |task| %>
+      <tr>
+        <td>
+			<% task.projects.each do |project| %>
+            <%= link_to "#{project.project_icon}", project %>
+          <% end %>
+        </td>
+        <td class="text-decoration-none"><%= link_to "#{task.task_name}", task%></td>
+        <td><%= task.task_hours %> hs</td>
+        <td><%= task.created_at.strftime("%b %d, %Y") %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
