@@ -5,7 +5,6 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.string :project_icon
       t.integer :user_id
 
-
       t.timestamps
     end
   end
