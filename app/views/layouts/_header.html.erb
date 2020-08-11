@@ -2,7 +2,15 @@
   <div class="collapse" id="navbarToggleExternalContent">
     <div class="bg-dark p-4">
       <h5 class="text-white h4">Task Manager</h5>
-      <span class="text-muted">Task management app.</span>
+      <span class="text-muted">Task management app.</span><br>
+	  <% if logged_in? %>
+	  <%= link_to 'All my projects', projects_path, class: "text-white" %></li><br>
+	  <%= link_to 'All other tasks', tasks_no_project_path, class: "text-white"%><br>
+	  <%= link_to 'All my tasks', tasks_path, class: "text-white "  %></li><br>
+	  <%= link_to 'Home', current_user, class: "text-white "  %></li><br>
+	  <% end %>
+	  
+									
     </div>
   </div>
   <nav class="navbar navbar-dark mb-1" style="background-color: #0c193e;">
