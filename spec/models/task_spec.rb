@@ -55,6 +55,5 @@ RSpec.describe Task, type: :model do
       it { should have_many(:project_tasks) }
       it { should have_many(:projects) }
     end
-
   end
 end
