@@ -11,33 +11,32 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2020_08_06_230943) do
-  create_table 'project_tasks', force: :cascade do |t|
-    t.integer 'project_id'
-    t.integer 'task_id'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "project_tasks", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "task_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'projects', force: :cascade do |t|
-    t.string 'project_name'
-    t.string 'project_icon'
-    t.integer 'user_id'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "projects", force: :cascade do |t|
+    t.string "project_name"
+    t.string "project_icon"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'tasks', force: :cascade do |t|
-    t.string 'task_name'
-    t.integer 'task_hours'
-    t.string 'task_status'
-    t.integer 'user_id'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "tasks", force: :cascade do |t|
+    t.string "task_name"
+    t.integer "task_hours"
+    t.string "task_status"
+    t.integer "user_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table 'users', force: :cascade do |t|
-    t.string 'username'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-  end
 end
