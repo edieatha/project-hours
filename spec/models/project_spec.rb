@@ -33,6 +33,5 @@ RSpec.describe Project, type: :model do
       it { should have_many(:project_tasks) }
       it { should have_many(:tasks) }
     end
-
   end
 end
