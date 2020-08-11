@@ -1,3 +1,5 @@
+# This file is auto-generated from the current state of the database. Instead
+# of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
 # This file is the source Rails uses to define your schema when running `rails
@@ -27,6 +29,7 @@ ActiveRecord::Schema.define(version: 2020_08_06_230943) do
   create_table 'tasks', force: :cascade do |t|
     t.string 'task_name'
     t.integer 'task_hours'
+    t.string 'task_status'
     t.integer 'user_id'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
