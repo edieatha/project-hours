@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all.order(name: :asc)
+    @projects = Project.all.order(project_name: :asc)
   end
 
   def create
