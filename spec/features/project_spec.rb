@@ -35,6 +35,4 @@ RSpec.describe 'Project feature', type: :feature do
     click_button 'Create Project'
     expect(page).to have_content('Project creation failed!')
   end
-
-
 end

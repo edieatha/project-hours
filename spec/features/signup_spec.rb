@@ -21,5 +21,4 @@ RSpec.describe 'Signup feature', type: :feature do
     click_button 'Create my account'
     expect(page). to have_content('Sign up')
   end
-
 end
