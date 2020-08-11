@@ -1,0 +1,7 @@
+<% provide(:title, "new task") %>
+
+<%= render 'tasks_form', task: @task %>
+<br>
+<%= button_to 'back', request.referrer, method: :get, 
+class: 'mt-2 btn-lg btn-primary btn-block' %>
+<br>

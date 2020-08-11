@@ -1,0 +1,18 @@
+<%= form_with(model: project, local: true, class: "form-group") do |form| %>
+  
+   <%= form.label :project_name, class: "text-white" %>
+    <%= form.text_field :project_name, class: "form-control", placeholder: "project name" %>
+ <br>
+  <div class="text-white">
+      <%= form.label :project_icon, class: "text-white" %>
+      <%= form.select(:project_icon, options_for_select([["📆"], ["📕"], ["📂"], ["🔰"], ["♦️"], ["🏆"], ["🎖"], ["🎯"],
+                                                         ["🧳"], ["🤖"], ["🧑🏻‍💻"], ["🎓"], ["🚗"], ["🛠"], ["📚"], ["📬"],
+                                                         ["🔬"], ["📸"], ["🎥"], ["🎸"], ["🎧"]])) %>
+  </div>
+
+  <br>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-primary btn-block" %>
+  </div>
+<% end %>
