@@ -4,20 +4,19 @@ RSpec.describe User, type: :model do
     let(:user) { User.new(username: 'username') }
     let(:user2) { User.new(username: 'username2') }
 
-
     it 'NOT VALID if username blank!' do
       user.username = ''
-      expect(user).not_to  be_valid
+      expect(user).not_to be_valid
     end
 
-    it 'VALID if username presemt!' do
-      expect(user).to be_valid  
+    it 'VALID if username present!' do
+      expect(user).to be_valid
     end
 
     it 'NOT VALID if username already taken' do
       user2.save
       user.username = 'username2'
-      expect(user).not_to  be_valid
+      expect(user).not_to be_valid
     end
   end
 
