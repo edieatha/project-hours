@@ -83,6 +83,7 @@ Feel free to check the [issues page](https://github.com/edieatha/project-hours/i
 ## Acknowledgments
 
 * [Microverse](https://www.microverse.org/)
+ > Design given by: [@Gregoire Vella on Behance](https://www.behance.net/gregoirevella)
 
 ## 📝 License
 
