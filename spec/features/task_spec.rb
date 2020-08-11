@@ -16,7 +16,7 @@ RSpec.describe 'Task feature', type: :feature do
     expect(page).to have_content('task_name')
   end
 
-  scenario 'Not logged in user should not create a task' do
+  scenario 'Not logged in user shouldnt create a task' do
     user.save
     visit login_path
     fill_in 'Username', with: ''
