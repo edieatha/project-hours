@@ -3,7 +3,6 @@
 <div class="col-12 mb-5">
   <div class="text-center text-white">
     <%= form_with(model: @user, local: true) do |f| %>
-      <%= render 'shared/error_messages' %>
 
       <%= f.label :username %>
       <%= f.text_field :username, class: 'mb-1 form-control' %>
