@@ -1,7 +1,6 @@
 # Project Hours for Task Manager app with Ruby on Rails
 
-> This repo includes code for a Task Manager app built with rails. One can track hours spent on a task and group the tasks 
-> based on the projects.
+> This repo includes code for a Task Manager app built with rails. One can track hours spent on a task and group the tasks based on projects undertaken. I built the app with clockify time tacking app in mind. However, with this app one has to manually record and enter the time slots and tasks/projects. This will help those who keep forgetting to start the clockify app each time they work.
 
 ## Extra Feature
 > The added feature includes selection of task status (Done, Pending, and complete)
