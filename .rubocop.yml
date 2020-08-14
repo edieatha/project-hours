@@ -59,3 +59,5 @@ Style/HashTransformValues:
   Enabled: false
 Style/NumericLiterals:
   Enabled: false
+Style/GuardClause:
+  Enabled: false
