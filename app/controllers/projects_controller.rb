@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
 
   def show
     @projects = Project.includes(:tasks)
+    @tasks = current_user.tasks.includes(:project_tasks).where(project_tasks: { project_id: @project })
   end
 
   def edit; end
