@@ -15,10 +15,10 @@ html {
 }
 
 body {
-    max-width: 500px;
-    margin: auto;
     font-family: 'ProximaNova-Regular', Helvetica, Arial, sans-serif;
     height: 100%;
+    margin: auto;
+    max-width: 500px;
 }
 
 h1 {
